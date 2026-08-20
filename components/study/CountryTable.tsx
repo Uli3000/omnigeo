@@ -105,11 +105,15 @@ export default function CountryTable({ countries, continent }: Props) {
                 index % 2 === 0 ? 'bg-transparent' : 'bg-white/2'
             }`}
             >
-                <img
-                    src={country.flag}
-                    alt={`Bandera de ${country.name}`}
-                    className="w-8 h-5 object-cover rounded-sm"
-                />
+                {country.flag ? (
+                    <img
+                        src={country.flag}
+                        alt={`Bandera de ${country.name}`}
+                        className="w-8 h-5 object-cover rounded-sm"
+                    />
+                ) : (
+                    <div className="w-8 h-5 rounded-sm bg-white/10" />
+                )}
                 <span className="text-sm font-medium">{language === 'es' && country.nameEs ? country.nameEs : country.name}</span>
                 <span className="text-sm text-white/60">{country.capital}</span>
                 <span className="text-xs px-2 py-1 rounded bg-white/10 text-white/60 w-fit uppercase tracking-wide">{country.subregion}</span>

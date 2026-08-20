@@ -23,9 +23,9 @@ export const QUIZ_CONFIG = {
   ],
 }
 
+// v5 usa "response_fields" (no "fields") y nombres de campo nuevos
 export const RESTCOUNTRIES_FIELDS = [
-  'name', 'capital', 'flags', 'coatOfArms',
-  'cca2', 'cca3', 'subregion', 'region',
-  'population', 'area', 'languages',
-  'currencies', 'latlng','independent','translations'
+  'names', 'codes', 'capitals', 'flag',
+  'subregion', 'region', 'population', 'area',
+  'languages', 'currencies', 'coordinates', 'classification'
 ].join(',')
